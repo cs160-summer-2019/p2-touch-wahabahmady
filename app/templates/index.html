@@ -84,7 +84,46 @@
 		</div>
 	</div>
 	<script>
-	  // your solution here
+    
+	 var rotate = document.getElementById('rotate-box');
+    var rot = new Hammer(rotate);
+   rot.get('rotate').set({ enable: true });
+      
+   var pinch = document.getElementById('pinch-box');
+   var pin = new Hammer(pinch);
+    rot.get('pinch').set({ enable: true });
+    
+    
+    var press = document.getElementById('press-box');
+   var pres = new Hammer(press);
+    pres.get('press').set({ enable: true });
+    
+    
+    var press = document.getElementById('press-box');
+   var pres = new Hammer(press);
+    pres.get('press').set({ enable: true });
+    
+     
+    
+    var pan = document.getElementById('pan-box');
+var hpan = new Hammer(pan)
+hpan.on('pan', function(ev) {
+	console.log(ev);
+});
+    
+     var tap = document.getElementById('tap-box');
+var htap = new Hammer(tap)
+htap.get('tap').set({ enable: true });
+    
+    var swipe = document.getElementById('swipe-box');
+var hswipe = new Hammer(swipe)
+hswipe.get('swipe').set({ enable: true });
+
+    
+    
+     
+});
+    
   </script>
 </body>
 </html>
