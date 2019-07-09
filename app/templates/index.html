@@ -85,44 +85,97 @@
 	</div>
 	<script>
     
-	 var rotate = document.getElementById('rotate-box');
-    var rot = new Hammer(rotate);
-   rot.get('rotate').set({ enable: true });
+    var rrotate = document.getElementById('rotate-box');
+    var rot = new Hammer(rrotate);
+    var ro = new Hammer.Rotate();
+    rot.add([ro]);
+    rot.on("rotate", function(ev) {
+      rrotate.textContent = "move dat body like a cyclone";
+    })
+    
+    var Pinch = document.getElementById('pinch-box');
+    var pin = new Hammer(Pinch);
+    var p = new Hammer.Pinch();
+    pin.add([p]);
+    pin.on("pinch", function(ev) {
+      Pinch.textContent = "Yung Pinch on da rise";
+    })
+    
+    
+      var press = document.getElementById('press-box');
+      var pre = new Hammer(press);
+      pre.on("press", function(ev){
+        press.textContent = "press my mess";
+        })
+    
+    var swipe = document.getElementById('swipe-box');
+      var swippy = new Hammer(swipe);
+      swippy.on("swipe", function(ev){
+        swipe.textContent = "211 to yo foe-head";
+        })
+    
+    var Pan = document.getElementById('pan-box');
+      var pan = new Hammer(Pan);
+      pan.on("pan", function(ev){
+        Pan.textContent = "Peter Pan";
+        })
+
+    
+    
+    
+       var tapp = document.getElementById('tap-box');
+      var htap = new Hammer(tapp);
+      htap.on("tap", function(ev){
+        tapp.textContent = "tap dat";
+        })
+
+    
+    
+   //rot.get('rotate').set({ enable: true });
       
-   var pinch = document.getElementById('pinch-box');
-   var pin = new Hammer(pinch);
-    rot.get('pinch').set({ enable: true });
+//    //var pinch = document.getElementById('pinch-box');
+//    var pin = new Hammer(pinch);
+//     rot.get('pinch').set({ enable: true });
     
     
-    var press = document.getElementById('press-box');
-   var pres = new Hammer(press);
-    pres.get('press').set({ enable: true });
+//   //  var press = document.getElementById('press-box');
+//   // var pres = new Hammer(press);
+//   //  pres.get('press').set({ enable: true });
     
     
-    var press = document.getElementById('press-box');
-   var pres = new Hammer(press);
-    pres.get('press').set({ enable: true });
+//     var press = document.getElementById('press-box');
+//    var pres = new Hammer(press);
+//     pres.get('press').set({ enable: true });
     
      
     
-    var pan = document.getElementById('pan-box');
-var hpan = new Hammer(pan)
-hpan.on('pan', function(ev) {
-	console.log(ev);
-});
+//     var pan = document.getElementById('pan-box');
+// var hpan = new Hammer(pan)
+// hpan.on('pan', function(ev) {
+// 	console.log(ev);
+// });
     
-     var tap = document.getElementById('tap-box');
-var htap = new Hammer(tap)
-htap.get('tap').set({ enable: true });
+//      var Ttap = document.getElementById('tap-box');
+// var htap = new Hammer(Ttap)
+// htap.on("tap", function(ev){
+//         Ttap.textContent = "tap dat";
+//         });
+
+// //htap.get('tap').set({ enable: true });
     
-    var swipe = document.getElementById('swipe-box');
-var hswipe = new Hammer(swipe)
-hswipe.get('swipe').set({ enable: true });
+    
+    
+    
+    
+    
+//     var swipe = document.getElementById('swipe-box');
+// var hswipe = new Hammer(swipe)
+// hswipe.get('swipe').set({ enable: true });
 
     
     
      
-});
+
     
   </script>
 </body>
